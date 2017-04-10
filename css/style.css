@@ -52,80 +52,113 @@ body {
 
 /*
   ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.container {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 960px;
+}
+
+
+/*
+  ========================================
   Ajustes Generales
   ========================================
 */
-.contenedor {
-  background: #E3F8F5;
-  margin: 0 auto;
-  padding-bottom: 60px;
-  text-align: center;
+header {
+    background-color: #E99486;
+    height: 150px;
+    padding-top: 20px;
+}
+body {
+  background: #FFF7E7;
+}
+/*
+  ========================================
+  Sociales
+  ========================================
+*/
+table {
+  float: right;
+  margin-right: 100px;
+  margin-top: 10px;
+}
+tr {
+  border-bottom: 0;
 }
 
 /*
   ========================================
-  Logo
+  Logo y Slogan
   ========================================
 */
 .logo {
-  text-align: center;
-  padding-bottom: 50px;
+  float: left;
+  height: 89px;
+  width: 304px;
+  padding-bottom: 5px;
 }
-img {
-  border: 2px solid #000000;
-  border-radius: 5px;
-}
-
-/*
-  ========================================
-  Estilos de Texto
-  ========================================
-*/
-h1, h2 {
-  text-align: center;
-}
-h1 {
-  font-size: 28px;
-}
-h2 {
-  font-size: 20px;
-}
-h3 {
-  font-size: 12px;
-}
-
-/*
-  ========================================
-  Texto de Presentación
-  ========================================
-*/
-.presentacion {
-  text-align: center;
+.slogan {
+  font-style: italic;
+  float: left;
   padding-bottom: 25px;
-}
-
-/*
-  ========================================
-  Secciones
-  ========================================
-*/
-.secciones {
-  margin-bottom: 25px;
+  padding-left: 100px;
   text-align: center;
 }
-.seccion {
-  border: 4px solid #000000;
+/*
+  ========================================
+  Menú Principal
+  ========================================
+*/
+a {
+  color: #A39D92;
+  text-decoration: none;
+}
+a:hover {
+  color: #BF6051;
+}
+nav {
+    background: #F5ECD9;
+    clear: both;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    }
+nav li {
   display: inline-block;
-  margin: 15px;
-  padding: 50px;
-  width: 100px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 550;
+  padding-right: 5px;
+}
+nav li:last-child {
+  padding-left: 80px;
+}
+ul {
+  height: 21px;
+  padding: 5px;
 }
 
 /*
   ========================================
-  Footer
+  Búsqueda
   ========================================
 */
-.footer-principal {
-  text-align: center;
+input {
+  border-color: solid #E99486;
+  border-radius: 25px;
+  font-size: 15px;
+  height: 30px;
+  width: 150px;
 }
