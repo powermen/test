@@ -64,6 +64,7 @@ body {
           box-sizing: border-box;
 }
 .container {
+  display: block;
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
@@ -78,6 +79,7 @@ body {
 */
 header {
     background-color: #E99486;
+    display: block;
     height: 205px;
     padding-top: 20px;
     margin-bottom: 30px;
@@ -87,6 +89,7 @@ body {
 }
 article {
   border-top: 1px solid #DFD8CB;
+  display: block;
   float: left;
   padding-top: 20px;
 }
@@ -112,13 +115,20 @@ h2 {
   padding-bottom: 10px;
   text-transform: uppercase;
 }
-
+small {
+  color: #D8B69B;
+  font-size: 14px;
+  margin-top: 25px;
+}
+a small {
+  color: #F6E5E3;
+}
 /*
   ========================================
   Social
   ========================================
 */
-table {
+.social {
   float: right;
   margin-right: 100px;
   margin-top: 10px;
@@ -198,8 +208,13 @@ input {
   ========================================
 */
 .posts {
-  height: 550px;
+  height: 580px;
   width: 500px;
+}
+.posts li {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #8B707A;
 }
 .preview {
   border: 10px solid #fff;
@@ -231,9 +246,13 @@ input {
   padding-bottom: 10px;
   padding-left: 10px;
 }
+.links {
+  text-decoration: underline;
+}
 .tags {
   float: left;
-   padding-top: 10px;
+  padding-top: 10px;
+  padding-left: 15px;
 }
 .readmore {
   background: #D36A59;
@@ -243,6 +262,8 @@ input {
   float: left;
   font-size: 18px;
   height: 33px;
+  margin-top: 25px;
+  margin-left: 15px;
   padding-top: 7px;
   text-align: center;
   text-transform: uppercase;
@@ -254,12 +275,13 @@ input {
 }
 /*
   ========================================
-  Right Widget
+  Right Widgets
   ========================================
 */
 .widget {
   background: linear-gradient(to top, #FFF7E7 85%, #F5ECD9);
   border-radius: 30px 30px 0 0;
+  display: block;
   float: right;
   height: 450px;
   padding-top: 15px;
@@ -267,11 +289,47 @@ input {
   text-align: center;
 }
 .about_image {
-    border-radius: 50%;
-    border: 10px solid #fff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+  border: 10px solid #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .about_text {
   color: #8B707A;
-  font-size: 18px;
+  font-size: 17px;
+  padding-top: 15px;
+}
+.categories {
+  padding-bottom: 15px;
+}
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+footer {
+  background-color: #F5ECD9;
+  display: block;
+  clear: left;
+  height: 280px;
+}
+.footer_columns {
+  float: left;
+  font-size: 17px;
+  height: 220px;
+  margin: 12px;
+  width: 200px;
+  text-align: center;
+}
+.footer_bottom {
+  display: block;
+  background-color: #9F6259;
+  clear: both;
+  height: 70px;
+  padding-top: 15px;
+  vertical-align: center;
+}
+.footer_social {
+  float: right;
+  margin: 0 5px;
 }
