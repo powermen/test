@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <audio id="audiotag1" src="css/media/28H.wav" preload="auto"></audio>
+    <div id="mainArea">
+        <div id="userHPBar">
+            <div id="userStatusHPBar">
+            </div>
+        </div>
+        <div id="enemyHPBar">
+            <div id="enemyStatusHPBar">
+
+            </div>
+        </div>
+        <div id="userView" class="userNormal">
+
+        </div>
+        <div id="actionArea">
+            <form id="buttonArea" class="show">
+                <input type="button" id="0" value="Piedra" onclick="model.startAttack(0)">
+                <input type="button" id="1" value="Papel" onclick="model.startAttack(1)">
+                <input type="button" id="2" value="Tijeras" onclick="model.startAttack(2)"></form>
+        </div>
+        <div id="enemyView" class="enemyNormal">
+        </div>
+        <div id="narration"> VS
+        </div>
+    </div>
+    <audio id="punch" src="css/media/28H.wav" preload="auto"></audio>
+    <script type="text/javascript" src="js/game.js"></script>
+</body>
+
+</html>

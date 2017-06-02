@@ -1,5 +1,6 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
-  License: none (public domain)
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -11,325 +12,189 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
+article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-  display: block;
+	display: block;
 }
 body {
-  line-height: 1;
+	line-height: 1;
 }
 ol, ul {
-  list-style: none;
+	list-style: none;
 }
 blockquote, q {
-  quotes: none;
+	quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none;
+	content: '';
+	content: none;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
+/* Start of the custom CSS */
 body {
-  background: #ECFFFD
+        background-color: black;
 }
-
-/*
-  ========================================
-  Grid
-  ========================================
-*/
-
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+/* Main Area of the Game */
+div#mainArea {
+    position: relative;
+    width: 720px;
+    height: 400px;
+    margin: auto;
+    background-color: green;
 }
-.container {
-  display: block;
-  margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
-  width: 960px;
+/* Players' Health Bars */
+div#userHPBar {
+    position: absoulte;
+    width: 300px;
+    height: 50px;
+    float: left;    
+    background-color: yellow;
+    margin-top: 10px;
+    margin-left: 10px;
 }
-
-
-/*
-  ========================================
-  General Settings
-  ========================================
-*/
-header {
-    background-color: #E99486;
+div#userStatusHPBar {
+    position: absoulte;
+    width: 0px;
+    height: 50px;
+    float: left;    
+    background-color: red; 
+}
+div#enemyHPBar {
+    position: absoulte;
+    width: 300px;
+    height: 50px;
+    float: right;    
+    background-color: yellow;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+div#enemyStatusHPBar {
+    position: absoulte;
+    width: 0px;
+    height: 50px;
+    float: right;    
+    background-color: red; 
+}
+/* Players Animation Area */
+div#userView {
+    position: absoulte;
+    background-color: white;
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin-top: 45px;
+    margin-left: 65px;
+}
+div#enemyView {
+    position: absoulte;
+    background-color: white;
+    float: right;
+    height: 200px;
+    width: 200px;
+    margin-top: 45px;
+    margin-right: 65px;
+}
+/* User Animations */ 
+.userNormal {
+        background: url(media/userNormal.png) no-repeat center center;
+}
+.userAttack0 {
+          background: url(media/userAttack0.png) no-repeat center center;      
+}
+.userAttack1 {
+          background: url(media/userAttack1.png) no-repeat center center;      
+}
+.userAttack2 {
+          background: url(media/userAttack2.png) no-repeat center center;      
+}
+.userHit {
+    background: url(media/userHit.png) no-repeat center center;
+}
+.userDraw {
+        background: url(media/userDraw.png) no-repeat center center;
+}
+.userLowHP {
+        background: url(media/userLowHP.png) no-repeat center center;    
+}
+.userDizzy {
+          background: url(media/userDizzy.png) no-repeat center center;      
+}
+.userWin {
+          background: url(media/userWin.png) no-repeat center center;      
+}
+.userLose {
+          background: url(media/userDizzy.png) no-repeat center center;      
+}
+/* Enemy Animations */ 
+.enemyNormal {
+        background: url(media/enemyNormal.png) no-repeat center center;
+}
+.enemyAttack0 {
+          background: url(media/enemyAttack0.png) no-repeat center center;      
+}
+.enemyAttack1 {
+          background: url(media/enemyAttack1.png) no-repeat center center;      
+}
+.enemyAttack2 {
+          background: url(media/enemyAttack2.png) no-repeat center center;      
+}
+.enemyHit {
+    background: url(media/enemyHit.png) no-repeat center center;
+}
+.enemyDraw {
+        background: url(media/enemyDraw.png) no-repeat center center;
+}
+.enemyLowHP {
+        background: url(media/enemyLowHP.png) no-repeat center center;    
+}
+.enemyDizzy {
+          background: url(media/enemyDizzy.png) no-repeat center center;      
+}
+.enemyWin {
+          background: url(media/enemyWin.png) no-repeat center center;      
+}
+.enemyLose {
+          background: url(media/enemyDizzy.png) no-repeat center center;      
+}
+/* User Action Buttons */
+div#actionArea {
+    position: absolute;
     display: block;
-    height: 205px;
-    padding-top: 20px;
-    margin-bottom: 30px;
+    margin-left: 80px;
+    margin-top: 320px;
 }
-body {
-  background: #FFF7E7;
+.show {
+    font-weight: bold;
 }
-article {
-  border-top: 1px solid #DFD8CB;
-  display: block;
-  float: left;
-  padding-top: 20px;
+.hide {
+    display: none;
 }
-
-/*
-  ========================================
-  Typography
-  ========================================
-*/
-h1 {
-  color: #BF6051;
-  font-size: 40px;
-  font-weight: 600;
-  padding-bottom: 10px;
-}
-h1 a:hover {
-  color: #954A3D;
-}
-h2 {
-  color: #D36A59;
-  font-size: 18px;
-  font-weight: 600;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-}
-small {
-  color: #D8B69B;
-  font-size: 14px;
-  margin-top: 25px;
-}
-a small {
-  color: #F6E5E3;
-}
-/*
-  ========================================
-  Social
-  ========================================
-*/
-.social {
-  float: right;
-  margin-right: 100px;
-  margin-top: 10px;
-}
-tr {
-  border-bottom: 0;
-}
-
-/*
-  ========================================
-  Logo & Slogan
-  ========================================
-*/
-.logo {
-  float: left;
-  height: 89px;
-  width: 304px;
-  padding-bottom: 5px;
-}
-.slogan {
-  font-style: italic;
-  float: left;
-  padding-bottom: 25px;
-  padding-left: 100px;
-  text-align: center;
-}
-/*
-  ========================================
-  Main Menu
-  ========================================
-*/
-a {
-  color: #A39D92;
-  text-decoration: none;
-}
-a:hover {
-  color: #BF6051;
-}
-nav {
-    background: #F5ECD9;
-    clear: both;
+/* Show Selection */
+div#narration {
+    color: white;
+    background-color: blue;
+    position: absolute;
+    width: 150px;
+    height: 40px;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 25px;
-    }
-nav li {
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 550;
-  padding-right: 5px;
-}
-nav li:last-child {
-  padding-left: 80px;
-}
-ul {
-  height: 21px;
-  padding: 5px;
-}
-
-/*
-  ========================================
-  Search
-  ========================================
-*/
-input {
-  border-color: solid #E99486;
-  border-radius: 25px;
-  font-size: 15px;
-  height: 30px;
-  width: 150px;
-}
-
-/*
-  ========================================
-  Posts (Preview)
-  ========================================
-*/
-.posts {
-  height: 580px;
-  width: 500px;
-}
-.posts li {
-  font-size: 15px;
-  text-transform: uppercase;
-  color: #8B707A;
-}
-.preview {
-  border: 10px solid #fff;
-  border-radius: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  height: 230px;
-  width: 500px;
-}
-.extract {
-  font-size: 23px;
-  float: left;
-  padding-left: 15px;
-  padding-bottom: 15px;
-  padding-top: 12px;
-  width: 250px;
-}
-.metabox {
-  background: #F5ECD9;
-  border-radius: 0 0 15px 15px;
-  float: right;
-  font-size: 18px;
-  height: 150px;
-  margin-right: 28px;
-  padding-top: 10px;
-  width: 200px;
-}
-.metabox li {
-  font-weight: 600;
-  padding-bottom: 10px;
-  padding-left: 10px;
-}
-.links {
-  text-decoration: underline;
-}
-.tags {
-  float: left;
-  padding-top: 10px;
-  padding-left: 15px;
-}
-.readmore {
-  background: #D36A59;
-  border-radius: 25px;
-  clear: both;
-  color: #FFF7E7;
-  float: left;
-  font-size: 18px;
-  height: 33px;
-  margin-top: 25px;
-  margin-left: 15px;
-  padding-top: 7px;
-  text-align: center;
-  text-transform: uppercase;
-  width: 150px;
-}
-.readmore:hover{
-    background: #954A3D;
-    text-decoration: none;
-}
-/*
-  ========================================
-  Right Widgets
-  ========================================
-*/
-.widget {
-  background: linear-gradient(to top, #FFF7E7 85%, #F5ECD9);
-  border-radius: 30px 30px 0 0;
-  display: block;
-  float: right;
-  height: 450px;
-  padding-top: 15px;
-  width: 300px;
-  text-align: center;
-}
-.about_image {
-  border-radius: 50%;
-  border: 10px solid #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.about_text {
-  color: #8B707A;
-  font-size: 17px;
-  padding-top: 15px;
-}
-.categories {
-  padding-bottom: 15px;
-}
-
-/*
-  ========================================
-  Footer
-  ========================================
-*/
-footer {
-  background-color: #F5ECD9;
-  display: block;
-  clear: left;
-  height: 280px;
-}
-.footer_columns {
-  float: left;
-  font-size: 17px;
-  height: 220px;
-  margin: 12px;
-  width: 200px;
-  text-align: center;
-}
-.footer_bottom {
-  display: block;
-  background-color: #9F6259;
-  clear: both;
-  height: 70px;
-  padding-top: 15px;
-  vertical-align: center;
-}
-.footer_social {
-  float: right;
-  margin: 0 5px;
+    padding-top: 5px;
+    margin-top: 180px;
+    margin-left: 285px;
 }
